@@ -1,10 +1,10 @@
 const keys = require('./keys'); 
 const redis = require('redis'); 
 
-const redisClient = redis.createCluent({
+const redisClient = redis.createClient({
     host: keys.redisHost, 
     port: keys.redisPort, 
-    retry_Strategy: () => 1000 // Reconnect every 1 second
+    retry_strategy: () => 1000 // Reconnect every 1 second
 }); 
 
 // Subscription for Redis
@@ -13,7 +13,7 @@ const sub = redisClient.duplicate();
 // Fibonacci recursive solution. 
 // this is very slow. 
 function fib(index) {
-    if (index < 1) return 1; 
+    if (index < 2) return 1; 
     return fib(index - 1) + fib(index - 2); 
 }
 
