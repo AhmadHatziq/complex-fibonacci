@@ -33,7 +33,7 @@ deploy:
   app: multi-docker 
   env: Multidocker-env
   bucker_name: elasticbeanstalk-us-west-2-904972942839
-  bucker_path: docker-multi
+  bucket_path: docker-multi
 
 
   # Only do the deployment on the feature branch 
