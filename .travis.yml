@@ -37,7 +37,7 @@ deploy:
 
   # Only do the deployment on the feature branch 
   on: 
-    branch: master 
+    branch: main 
 
   # AWS Access Credentials 
   access_key_id: $AWS_ACCESS_KEY
