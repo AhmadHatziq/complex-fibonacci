@@ -20,8 +20,27 @@ after_success:
   # Login to Docker in a single line command. 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 
-  # Push the images into Docker hup 
+  # Push the images into Docker hub 
   - docker push bobuvula/multi_client
   - docker push bobuvula/multi_nginx
   - docker push bobuvula/multi_server
   - docker push bobuvula/multi_worker
+
+# Deploy to AWS 
+deploy: 
+  provider: elasticbeanstalk 
+  region: us-west-2
+  app: multi-docker 
+  env: MultiDocker-env 
+  bucker_name: elasticbeanstalk-us-west-2-904972942839
+  bucker_path: docker-multi
+
+  # Only do the deployment on the feature branch 
+  on: 
+    branch: master 
+
+  # AWS Access Credentials 
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
+
