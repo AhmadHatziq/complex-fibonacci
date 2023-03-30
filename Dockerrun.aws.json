@@ -3,28 +3,28 @@
     "containerDefinitions": [
       {
         "name": "client",
-        "image": "tuanany73/multi-client",
+        "image": "bobuvula/multi_client",
         "hostname": "client",
         "essential": false,
         "memory": 128
       },
       {
         "name": "server",
-        "image": "tuanany73/multi-server",
+        "image": "bobuvula/multi_server",
         "hostname": "api",
         "essential": false,
         "memory": 128
       },
       {
         "name": "worker",
-        "image": "tuanany73/multi-worker",
+        "image": "bobuvula/multi_worker",
         "hostname": "worker",
         "essential": false,
         "memory": 128
       },
       {
         "name": "nginx",
-        "image": "tuanany/multi-ngnix",
+        "image": "bobuvula/multi_ngnix",
         "hostname": "nginx",
         "essential": true,
         "portMappings": [
