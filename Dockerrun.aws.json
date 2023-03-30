@@ -24,7 +24,7 @@
       },
       {
         "name": "nginx",
-        "image": "bobuvula/multi_ngnix",
+        "image": "bobuvula/multi_nginx",
         "hostname": "nginx",
         "essential": true,
         "portMappings": [
