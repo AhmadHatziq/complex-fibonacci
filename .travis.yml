@@ -29,11 +29,11 @@ after_success:
 # Deploy to AWS 
 deploy: 
   provider: elasticbeanstalk 
-  region: us-west-2
-  app: multi-docker 
-  env: Multidocker-env
-  bucker_name: elasticbeanstalk-us-west-2-904972942839
-  bucket_path: docker-multi
+  region: 'us-west-2'
+  app: 'multi-docker' 
+  env: 'Multidocker-env'
+  bucket_name: 'elasticbeanstalk-us-west-2-904972942839'
+  bucket_path: 'docker-multi'
 
 
   # Only do the deployment on the feature branch 
